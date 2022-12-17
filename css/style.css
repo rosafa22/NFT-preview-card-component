@@ -1,0 +1,122 @@
+:root{
+    --Soft-blue: hsl(215, 52%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    background-color: var(--card-bg);
+    width: 350px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.container{
+    width: 85%;
+    margin: auto;
+    padding: 1.75em 0;
+}
+.card .img{
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card .img:hover .overlay{
+    display: block;
+}
+.card .img img{
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+.card .img .overlay{
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+}
+.card .img .overlay img{
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card .info a{
+    color: var(--White);
+    font-size: 1.5rem;
+    margin: .75em 0;
+    text-decoration: none;
+    display: inline-block;
+}
+.card .info a:hover{
+    color: var(--Cyan);
+}
+.card .info p{
+    color: var(--Soft-blue);
+    font-weight: 300;
+    line-height: 1.6;
+}
+.card .info .days {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--line);
+}
+.card .info .days .left{
+    display: flex;
+    align-items: center;
+}
+.card .info .days .left h2{
+    font-size: 1rem;
+    color: var(--Cyan);
+    margin-left: .5em;
+    font-weight: 400;
+}
+.card .info .days .right{
+    display: flex;
+    align-items: center;
+}
+.card .info .days .right p{
+    margin-left: .5em;
+}
+.card .info .creation{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+.card .info .creation img{
+    width: 12%;
+    height: 12%;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+.card .info .creation p{
+    margin-left: 1em;
+    font-weight: 400;
+}
+.card .info .creation a{
+    color: var(--White);
+    font-size: 1rem;
+}
+.card .info .creation a:hover{
+    color: var(--Cyan);
+}
